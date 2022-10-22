@@ -5,15 +5,18 @@ import ReactDOM from 'react-dom/client';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Gretting () {
-    return <div>
-        <h1>This is a h1 in a div</h1>
-        <p>Mw2</p>
-        </div>;
+    const married = false;
+    const age = 18;
+
+    // if (married) {
+    //     return <h1> Estoy casado!</h1>
+    // };
+
+    //Ternary operators
+    return <h1>{married ? 'Estoy casado!' : 'No estoy casado'}</h1>
+
 };
 
-root.render(<div>
-    <Gretting/>
-    <Gretting/>
-    <Gretting/>
-</div>);
-
+root.render(
+    Gretting()
+);
