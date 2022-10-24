@@ -15,4 +15,4 @@ root.render(
         <Product />
         <Navbar />
     </>
-)
+);
