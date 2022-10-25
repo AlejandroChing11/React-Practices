@@ -10,10 +10,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <>
-        <Gretting title = "Hola Mundo" name="Ryan"/>
-        <Gretting title = "Hola React"/>
+        {/* <Gretting title = "Hola Mundo" name="Ryan"/>
+        <Gretting title = "Hola React" name="Alejandro"/>
         <Gretting title = "Hola JSX"/>
         <Gretting title = "Hola Javascript"/>
-        <Gretting title = "Hola Alejandro"/>
+        <Gretting title = "Hola Alejandro"/> */}
+        <UserCard title= "Hello this is my UserCard" name="AlejandroCard"/>
     </>
 );
