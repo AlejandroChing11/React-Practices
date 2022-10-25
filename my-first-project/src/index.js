@@ -15,6 +15,9 @@ root.render(
         <Gretting title = "Hola JSX"/>
         <Gretting title = "Hola Javascript"/>
         <Gretting title = "Hola Alejandro"/> */}
-        <UserCard title= "Hello this is my UserCard" name="AlejandroCard"/>
+        <UserCard name= "Mei Li ching" amount={500} married={true} points={[10, 9]} address={{street: "91 street", city: "Barranquilla"}}/>
+        <UserCard name="Alejandro Ching" amont={2000} married={false} points={[10, 9]} address={{street: "74 avenue Street",
+            city: "Barranquilla",}}/>
+
     </>
 );
