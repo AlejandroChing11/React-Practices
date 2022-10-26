@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Gretting, UserCard } from './Greeting';
 import Product, { Navbar } from './Product';
 import { Button } from './button.js';
-
+import { TaskCard } from './Task';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,9 +11,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <>
-        <Button text="Click me"/>
-        <Button text="Pay "/>
-        <Button text='' name="Alejandro"/>
+        <TaskCard ready={true} />
+
+
+
+
+
+
+        {/* <Button text="Click me" />
+        <Button text="Pay " />
+        <Button text='' name="Alejandro" /> */}
         {/* <Gretting title = "Hola Mundo" name="Ryan"/>
         <Gretting title = "Hola React" name="Alejandro"/>
         <Gretting title = "Hola JSX"/>
