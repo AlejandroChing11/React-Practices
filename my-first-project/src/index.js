@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Gretting, UserCard } from './Greeting';
 import Product, { Navbar } from './Product';
@@ -9,31 +9,63 @@ import { Post } from './Posts';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-const users = [{
-    id: 1,
-    name: 'Alejandro',
-    image: 'https://robohash.org/User2'
-},
-{
-    id: 2,
-    name: 'Benoit',
-    image: 'https://robohash.org/User3'
-}
-]
+// const users = [{
+//     id: 1,
+//     name: 'Alejandro',
+//     image: 'https://robohash.org/User2'
+// },
+// {
+//     id: 2,
+//     name: 'Benoit',
+//     image: 'https://robohash.org/User3'
+// }
+// ]
 
 // const HandleChange = (info) => {
 //     console.log(info.target.value);
 // };
 
+function Counter() {
 
+
+    const [counter, setCounter] = useState(0);
+
+
+    return <div>
+        <h1>Counter: {counter}</h1>
+        <button onClick={() => {
+            setCounter(counter + 1);
+        }}>
+            Sum
+        </button>
+    </div>
+}
 root.render(
     <>
-        {users.map((user, i) => {
-            return <div  key={i}>
+
+
+
+        <Counter />
+
+
+
+
+
+        {/* <h1>Counter: 0</h1>
+        <button>
+            Sumar
+        </button> */}
+
+
+
+
+
+        {/* {users.map((user, i) => {
+            return <div key={i}>
                 <h1>{user.name}</h1>
-                <img src={user.image}/>
+                <img src={user.image} />
             </div>
-        })}
+        })} */}
 
 
 
