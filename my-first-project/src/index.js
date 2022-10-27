@@ -7,11 +7,17 @@ import { TaskCard } from './Task';
 import { Saludar } from './Saludar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const HandleChange = (info) => {
+    console.log(info.target.value);
+};
+
 
 root.render(
     <>
 
-        <Saludar/>
+        <Button text='Saludar'/>
+
+        <input id="hola"onChange={HandleChange}/>
 
 
 
