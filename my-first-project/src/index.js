@@ -7,17 +7,25 @@ import { TaskCard } from './Task';
 import { Saludar } from './Saludar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const HandleChange = (info) => {
-    console.log(info.target.value);
-};
+// const HandleChange = (info) => {
+//     console.log(info.target.value);
+// };
 
 
 root.render(
     <>
 
-        <Button text='Saludar'/>
+        {/* <Button text='Saludar'/> */}
 
-        <input id="hola"onChange={HandleChange}/>
+        {/* <input id="hola"onChange={HandleChange}/> */}
+
+        <form onSubmit={(e) => {
+            e.preventDefault();
+            console.log('submited');
+        }}>
+            <h1>User register</h1>
+            <button>Send</button>
+        </form>
 
 
 
