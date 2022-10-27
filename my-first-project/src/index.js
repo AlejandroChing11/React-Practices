@@ -8,6 +8,19 @@ import { Saludar } from './Saludar';
 import { Post } from './Posts';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+
+const users = [{
+    id: 1,
+    name: 'Alejandro',
+    image: 'https://robohash.org/User2'
+},
+{
+    id: 2,
+    name: 'Benoit',
+    image: 'https://robohash.org/User3'
+}
+]
+
 // const HandleChange = (info) => {
 //     console.log(info.target.value);
 // };
@@ -15,7 +28,22 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <>
-        <Post/>
+        {users.map((user, i) => {
+            return <div  key={i}>
+                <h1>{user.name}</h1>
+                <img src={user.image}/>
+            </div>
+        })}
+
+
+
+
+
+
+
+
+
+        {/* <Post /> */}
         {/* <Button text='Saludar'/> */}
 
         {/* <input id="hola"onChange={HandleChange}/> */}
@@ -27,11 +55,6 @@ root.render(
             <h1>User register</h1>
             <button>Send</button>
         </form> */}
-
-
-
-
-
         {/* <Button text="Click me" />
         <Button text="Pay " />
         <Button text='' name="Alejandro" /> */}
