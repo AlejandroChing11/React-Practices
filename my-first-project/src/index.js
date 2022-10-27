@@ -5,6 +5,7 @@ import Product, { Navbar } from './Product';
 import { Button } from './button.js';
 import { TaskCard } from './Task';
 import { Saludar } from './Saludar';
+import { Post } from './Posts';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // const HandleChange = (info) => {
@@ -14,18 +15,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <>
-
+        <Post/>
         {/* <Button text='Saludar'/> */}
 
         {/* <input id="hola"onChange={HandleChange}/> */}
 
-        <form onSubmit={(e) => {
+        {/* <form onSubmit={(e) => {
             e.preventDefault();
             console.log('submited');
         }}>
             <h1>User register</h1>
             <button>Send</button>
-        </form>
+        </form> */}
 
 
 
