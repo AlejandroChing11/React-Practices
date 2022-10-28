@@ -1,12 +1,13 @@
-import TaskList from './TaskList'
-
+import TaskList from "./TaskList";
+import { TaskForm } from "./TaskForm";
 
 function App() {
   return (
-    <div>
+    <>
+      <TaskForm/>
       <TaskList />
-    </div>
-  )
+    </>
+  );
 }
 
-export default App 
+export default App;
