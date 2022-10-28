@@ -38,6 +38,17 @@ function Counter() {
         }}>
             Sum
         </button>
+        <button onClick={() => {
+            setCounter(counter - 1);
+        }}>
+            Minus
+        </button>
+        <button onClick={() => {
+            setCounter(0);
+        }}>
+
+            Restart
+        </button>
     </div>
 }
 root.render(
