@@ -28,28 +28,39 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 function Counter() {
 
 
-    const [counter, setCounter] = useState(0);
+    const [ msj, setMsj] = useState('');
+
+    return (
+        <div>
+            <input onChange={e => setMsj(e.target.value)}/>
+            <button onClick={() => {
+                alert('El mensaje es ' + msj);
+            }}>
+                Send
+            </button>
+        </div>
+    )
 
 
-    return <div>
-        <h1>Counter: {counter}</h1>
-        <button onClick={() => {
-            setCounter(counter + 1);
-        }}>
-            Sum
-        </button>
-        <button onClick={() => {
-            setCounter(counter - 1);
-        }}>
-            Minus
-        </button>
-        <button onClick={() => {
-            setCounter(0);
-        }}>
+    // return <div>
+    //     <h1>Counter: {counter}</h1>
+    //     <button onClick={() => {
+    //         setCounter(counter + 1);
+    //     }}>
+    //         Sum
+    //     </button>
+    //     <button onClick={() => {
+    //         setCounter(counter - 1);
+    //     }}>
+    //         Minus
+    //     </button>
+    //     <button onClick={() => {
+    //         setCounter(0);
+    //     }}>
 
-            Restart
-        </button>
-    </div>
+    //         Restart
+    //     </button>
+    // </div>
 }
 root.render(
     <>
