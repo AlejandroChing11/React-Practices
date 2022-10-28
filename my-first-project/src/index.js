@@ -32,7 +32,7 @@ function Counter() {
 
     useEffect(() => {
         console.log('render');
-    }, [counter]);
+    }, [counter]);//This works as an additional function that is looking after useEffect()
 
     return (
         <div>
