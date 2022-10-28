@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Gretting, UserCard } from './Greeting';
 import Product, { Navbar } from './Product';
@@ -27,8 +27,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function Counter() {
 
-
     const [ msj, setMsj] = useState('');
+
+    useEffect(function () {
+        console.log('render');
+    }, [ ]);
 
     return (
         <div>
