@@ -28,10 +28,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 function Counter() {
 
     const [ msj, setMsj] = useState('');
+    const [counter, setCounter] = useState(0)
 
-    useEffect(function () {
+    useEffect(() => {
         console.log('render');
-    }, [ ]);
+    }, [counter]);
 
     return (
         <div>
@@ -41,6 +42,17 @@ function Counter() {
             }}>
                 Send
             </button>
+
+
+            <hr/>
+
+                <h1>Counter: {counter}</h1>
+            <button onClick={() => {
+                setCounter(counter + 1);
+            }}>
+                increase
+            </button>
+            
         </div>
     )
 
