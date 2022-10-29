@@ -4,15 +4,19 @@ import { tasks as data } from "./task";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [task, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
     setTasks(data);
   }, []);
 
+  function createTask(task) {
+    setTasks([...tasks ,task])
+  }
+
   return (
     <>
-      <TaskForm />
+      <TaskForm createTask={createTask}/>
       <TaskList tasks={data}/>
     </>
   );
