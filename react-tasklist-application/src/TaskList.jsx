@@ -1,8 +1,11 @@
 
-function TaskList(props) {
+export function TaskList(props) {
+
+
   if (props.tasks.length === 0) {
-    return <h1>No hay tareas aun</h1>;
+    return <h1>No hay tareas aún</h1>;
   }
+
 
   return (
     <div>
@@ -16,4 +19,4 @@ function TaskList(props) {
   );
 }
 
-export default TaskList;
+
