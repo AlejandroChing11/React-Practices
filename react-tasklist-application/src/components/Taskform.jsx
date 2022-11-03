@@ -22,6 +22,7 @@ function Taskform({ createTask }) {
           setTitle(e.target.value);
         }}
         value={title}
+        autoFocus
       />
       <textarea
         placeholder="Escribe la descripcion de la tarea"
