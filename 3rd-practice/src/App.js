@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 
 function App() {
 
-  const [linea1, setLinea1] = useState("Hola mundo");
-  const [linea2, setLinea2] = useState("Estoy aprendiendo React");
-  const [image, setImage] = useState("");
+  const [linea1, setLinea1] = useState('Hola mundo');
+  const [linea2, setLinea2] = useState('Estoy aprendiendo React');
+  const [image, setImage] = useState('');
 
 
   return (
@@ -14,12 +14,12 @@ function App() {
       <select onChange={(e) => {
         setImage(e.target.value)
       }}>
-        <option value="Casa">Casa en llamas</option>
+        <option value="fire">Casa en llamas</option>
         <option value="futurama">futurama</option>
         <option value="history">historty chanel</option>
         <option value="matrix">Matrix</option>
         <option value="philosoraptor">philosoraptor</option>
-        <option value="smart guy">Smart Guy</option>
+        <option value="smart">Smart Guy</option>
       </select> <br />
 
       <input onChange={(e) => {
@@ -33,8 +33,8 @@ function App() {
 
       <div>
         <span>{linea1}</span> <br />
-        <span>{linea2}</span>
-        <img src="" />
+        <span>{linea2}</span> <br />
+        <img src={"/images" + image + ".jpg"} />
       </div>
 
     </div>
