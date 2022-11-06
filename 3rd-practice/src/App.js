@@ -4,21 +4,23 @@ import { useState } from 'react';
 
 function App() {
 
-  const [linea1, setLinea1] = useState('Hola mundo');
-  const [linea2, setLinea2] = useState('Estoy aprendiendo React');
+  const [linea1, setLinea1] = useState('');
+  const [linea2, setLinea2] = useState('');
   const [image, setImage] = useState('');
+
+  const onChangeImage = function (e) {
+    setImage(e.target.value)
+  }
 
 
   return (
     <div className="App">
-      <select onChange={(e) => {
-        setImage(e.target.value)
-      }}>
+      <select onChange={onChangeImage}>
         <option value="fire">Casa en llamas</option>
-        <option value="futurama">futurama</option>
-        <option value="history">historty chanel</option>
+        <option value="futurama">Futurama</option>
+        <option value="history">History Channel</option>
         <option value="matrix">Matrix</option>
-        <option value="philosoraptor">philosoraptor</option>
+        <option value="philosoraptor">Philosoraptor</option>
         <option value="smart">Smart Guy</option>
       </select> <br />
 
@@ -34,7 +36,7 @@ function App() {
       <div>
         <span>{linea1}</span> <br />
         <span>{linea2}</span> <br />
-        <img src={"/images" + image + ".jpg"} />
+        <img src={"/images/" + image + ".jpg"} alt="..."/>
       </div>
 
     </div>
