@@ -7,15 +7,15 @@ function App() {
   const [linea1, setLinea1] = useState('');
   const [linea2, setLinea2] = useState('');
   const [image, setImage] = useState('');
+  const [Button, setButton] = useState('');
 
-  const onChangeImage = function (e) {
-    setImage(e.target.value)
-  }
 
 
   return (
     <div className="App">
-      <select onChange={onChangeImage}>
+      <select onChange={(e) => {
+        setImage(e.target.value)
+      }}>
         <option value="fire">Casa en llamas</option>
         <option value="futurama">Futurama</option>
         <option value="history">History Channel</option>
@@ -30,13 +30,18 @@ function App() {
       <input onChange={(e) => {
         setLinea2(e.target.value);
       }} type="text" placeholder="Linea 2" /> <br />
-      <button>Export!</button> <br />
+      <button onClick={() => {
+        alert("Export!");
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+          document.body.appendChild(canvas);
+        });
+      }}>Export!</button> <br />
 
 
-      <div>
+      <div className="meme">
         <span>{linea1}</span> <br />
         <span>{linea2}</span> <br />
-        <img src={"/img/" + image + ".jpg"} alt="..." />
+        <img src={"/public/img/" + image + ".jpg"} alt=" " />
       </div>
 
     </div>
