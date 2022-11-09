@@ -1,13 +1,14 @@
 
 import './App.css';
 import { useState } from 'react';
+import html2canvas from 'html2canvas';
 
 function App() {
 
   const [linea1, setLinea1] = useState('');
   const [linea2, setLinea2] = useState('');
   const [image, setImage] = useState('');
-  const [Button, setButton] = useState('');
+  // const [Button, setButton] = useState('');
 
 
 
@@ -31,14 +32,17 @@ function App() {
         setLinea2(e.target.value);
       }} type="text" placeholder="Linea 2" /> <br />
       <button onClick={() => {
-        alert("Export!");
-        html2canvas(document.querySelector("#capture")).then(canvas => {
-          document.body.appendChild(canvas);
+        html2canvas(document.querySelector("#meme")).then(canvas => {
+          var img = canvas.toDataURL("image/png");
+          var link = document.createElement('a');
+          link.download = 'meme.png';
+          link.href = img;
+          link.click();
         });
       }}>Export!</button> <br />
 
 
-      <div className="meme">
+      <div className="meme" id="meme">
         <span>{linea1}</span> <br />
         <span>{linea2}</span> <br />
         <img src={"/public/img/" + image + ".jpg"} alt=" " />
