@@ -36,7 +36,7 @@ function App() {
       <div>
         <span>{linea1}</span> <br />
         <span>{linea2}</span> <br />
-        <img src={"/images/" + image + ".jpg"} alt="..."/>
+        <img src={"/img/" + image + ".jpg"} alt="..." />
       </div>
 
     </div>
